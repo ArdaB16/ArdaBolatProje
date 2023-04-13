@@ -1,103 +1,16 @@
-#sa{
-	padding:15px;
-	border-radius: 10px;
-}
-
-input[type=text] {
-	width: 10%;
-	-webkit-transition: width 0.15s ease-in-out;
-	transition: width 0.15s ease-in-out;
-}
-
-input[type=text]:focus {
-	width: 20%;
-}
-
-#list{
-	font-size: 1.5em;
-    margin-top: 2%;
-}
-
-.films{
-display: list-item;	
-}
-
-.menu
-{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    
-}
-.menu a
-{
-    color: white; 
-    background-color: #997;
-    width: 10%;
-    text-decoration: none;
-    padding: 1% 1%;
-
-}
-.menu a:hover
-{
-    font-weight: bold;
-    color:#960;
-    background-color: #cf3;
-}
-.menu li
-{
-    margin-left: 1%;
-    display: inline;
-}
 #container
 {
     width: 100%;
-    height: 178vh;
+    height: 180vh;
     background-color: rgb(34, 33, 33);
+    padding-top: 1%;
     float: left;
     color: white;
 }
-#top
+.yazılar
 {
-    width: 48%;
-    height: 13vh;
-    background-color: purple;
-    margin-left: 1%;
-    margin-top: 1%;
-    float: left;
-}
-#sdk
-{
-    float: left;
-    width: 100%;
-    margin-left: 1%;
-}
-#top2
-{
-    width: 50%;
-    height: 13vh;
-    background-color: purple;
-    margin-top: 1%;
-    float: left;
-}
-#sd
-{
-    width: 100%;
-    margin-left: 1%;
-    position: relative;
-    left: 83%;
-}
-#menu2
-{
-    position: relative;
-    bottom: 55%;
-    left: 60%;
-}
-#menu3
-{
-    position: relative;
-    bottom: 55%;
-    left: 60%;
+    color: black;
+	border-radius: 10px;
 }
 .resim
 {
@@ -109,43 +22,40 @@ display: list-item;
 }
 #sol
 {
-    background-color: rgb(137, 6, 245);
+    background-color:  rgb(68, 66, 70);
     width: 10%;
     height: 144vh;
     float: left;
     margin-left: 1%;
-    margin-top: 1%;
 }
 #orta
 {
-    background-color: rgb(48, 5, 83);
-    width: 76%;
+    background-color:  rgb(26, 23, 29);
+    width: 77%;
     height: 82vh;
     float: left;
     margin-left: 1%;
-    margin-top: 1%;
 }
 #yorum
 {
-    background-color: rgb(118, 20, 163);
-    width: 76%;
+    background-color: rgb(47, 40, 49);
+    width: 77%;
     height: 60vh;
-    float: left;
+    float: right;
     margin-top: 1%;
     margin-left: 1%;
 }
 #sag
 {
-    background-color: rgb(137, 6, 245);
+    background-color: rgb(68, 66, 70);
     width: 10%;
     height: 144vh;
     float: right;
-    margin-right: 1%;
-    margin-top: 1%;
+    margin-left: 1%;
 }
 #alt
 {
-    background-color: gray;
+    background-color: rgb(65, 65, 65);
     width: 98%;
     height: 13vh;
     float: left;

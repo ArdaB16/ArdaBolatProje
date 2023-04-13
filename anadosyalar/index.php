@@ -7,52 +7,62 @@
     <title>ArdaB Proje</title>
     <link rel="stylesheet" type="text/css" href="../cssler/style.css">
     <link href=kodla.js>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div id="container">
-        <div id="top"> 
-            <div id="sdk">
-                <a href="index.php"><img src="../foto/toppng.com-kamera-film-841x720.png" width="12%"></a>
-
-            </div> 
-        </div>
-
-
-     <div id="top2"> 
-         <div id="sd">
-               <a href="ara.php"><img src="../foto/pngwing.com.png" width="12%"></a>
-         </div> 
-         <div id="menu2">
-              <ul class="menu">
-              <?php
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <br>
+      <a class="navbar-brand" href="index.php">FullHDFilmİzlermisin.com</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+    <?php
                   session_start();
                   if(isset($_SESSION['username'])) {
                   echo "Welcome " . $_SESSION['username'];
                   echo '<br>';
                   echo '<br>';
-                  echo '<li><a href="logout.php">Çıkış Yap</a></li>';
-                  echo '<li><a href="hesapayarlari.php">Hesap Ayarları</a></li>';
+                  echo '<li><a href="logout.php"><span class="glyphicon glyphicon-user"></span>Çıkış Yap</a></li>';
+                  echo '<li><a href="hesapayarlari.php"><span class="glyphicon glyphicon-user"></span>Hesap Ayarları</a></li>';
+                  echo '<li><a href="ara.php"><span class="glyphicon glyphicon-search"></span>Ara</a></li>';
+
                   
     }   else {
-        echo '<li><a href="kayitol.php">Kayit Ol</a></li>';
-        echo '<li><a href="girisyap.php">Giriş Yap</a></li>';
+        echo '<li><a href="kayitol.php"><span class="glyphicon glyphicon-log-in"></span>Kayıt Ol</a></li>';
+        echo '<li><a href="girisyap.php"><span class="glyphicon glyphicon-log-in"></span>Giriş Yap</a></li>';
+        echo '<li><a href="ara.php"><span class="glyphicon glyphicon-search"></span>Ara</a></li>';
+
     }
 ?>
                 </ul>
- 
-
-            </div>
-     </div>
-     
+    </ul>
+  </div>
+</nav>  
 <div id="body2">
  <div id="sol"></div>
  <div id="orta">
-    <a href="../filmsayfası/recep1.php"><img src="../foto/recep.jpg"class="resim"></a>
-    <a href="../filmsayfası/arog.php"><img src="../foto/Arog.jpg" class="resim"></a>
-    <a href="../filmsayfası/hababamsinifi.php"><img src="../foto/Hababam-sinifi.jpg" class="resim"></a>
-    <a href="../filmsayfası/hababamasker.php"><img src="../foto/hababam.jpg" class="resim"></a>
-    <a href="../filmsayfası/sagsalim.php"><img src="../foto/sagsalim.jpg" class="resim"></a>
-    <a href="../filmsayfası/hepyek.php"><img src="../foto/hepyek.jpg" class="resim"></a>
+ <div class="araba">
+   <a href="../filmsayfası/recep1.php"><img src="../foto/recep.jpg"></a>
+  </div>
+  <div class="araba" id="sa1">
+  <a href="../filmsayfası/arog.php"><img src="../foto/arog.jpg"></a>
+  </div>
+  <div class="araba" id="sa2">
+  <a href="../filmsayfası/hababamsinifi.php"> <img src="../foto/Hababam-sinifi.jpg"></a>
+  </div>
+   <div class="araba" id="sa3">
+   <a href="../filmsayfası/hababamasker.php"><img src="../foto/hababam.jpg"></a>
+  </div>
+  <div class="araba" id="sa4">
+  <a href="../filmsayfası/sagsalim.php"> <img src="../foto/sagsalim.jpg"></a>
+  </div>
+  <div class="araba" id="sa5">
+  <a href="../filmsayfası/hepyek.php"> <img src="../foto/hepyek.jpg"></a>
+  </div>
 </div>
  <div id="sag"></div>
  

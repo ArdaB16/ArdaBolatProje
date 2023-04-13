@@ -6,28 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArdaB Proje</title>
     <link rel="stylesheet" href="../cssler/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-    <div id="container">
-        <div id="top"> 
-            <div id="sdk">
-                <a href="index.php"><img src="foto/toppng.com-kamera-film-841x720.png" width="12%"></a>
-            </div> 
-        </div>
+<div id="container">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <br>
+      <a class="navbar-brand" href="index.php">FullHDFilmİzlermisin.com</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+    <?php
+                  session_start();
+                  if(isset($_SESSION['username'])) {
+                  echo "Welcome " . $_SESSION['username'];
+                  echo '<br>';
+                  echo '<br>';
+                  echo '<li><a href="logout.php"><span class="glyphicon glyphicon-user"></span>Çıkış Yap</a></li>';
+                  echo '<li><a href="hesapayarlari.php"><span class="glyphicon glyphicon-user"></span>Hesap Ayarları</a></li>';
+                  echo '<li><a href="ara.php"><span class="glyphicon glyphicon-search"></span>Ara</a></li>';
 
+                  
+    }   else {
+        echo '<li><a href="kayitol.php"><span class="glyphicon glyphicon-log-in"></span>Kayıt Ol</a></li>';
+        echo '<li><a href="girisyap.php"><span class="glyphicon glyphicon-log-in"></span>Giriş Yap</a></li>';
+        echo '<li><a href="ara.php"><span class="glyphicon glyphicon-search"></span>Ara</a></li>';
 
-     <div id="top2"> 
-         <div id="sd">
-               <a href="ara.php"><img src="foto/pngwing.com.png" width="12%"></a>
-         </div> 
-         <div id="menu2">
-              <ul class="menu">
-                  <li><a href="kayitol.php">Kayit Ol</a></li>
-                  <li><a href="girisyap.php">Giriş Yap</a></li>
+    }
+?>
                 </ul>
-            </div>
-     </div>
-     
+    </ul>
+  </div>
+</nav>  
 <div id="body2">
  <div id="sol"></div>
  <div id="orta">
@@ -56,10 +70,10 @@
     }
 ?>
 <form action="sifremiunuttum.php" method="post">
-    Email: <input type="email" name="email"><br>
-    Phone: <input type="tel" name="phone"><br>
-    Anahtar: <input type="text" name="key"><br>
-    <input type="submit" value="Submit">
+    Email: <input type="email" class="yazılar" name="email"><br>
+    Phone: <input type="tel" class="yazılar" name="phone"><br>
+    Anahtar: <input type="text" class="yazılar" name="key"><br>
+    <input type="submit" class="btn" value="Submit">
 </form>
  </div>
  <div id="sag"></div>

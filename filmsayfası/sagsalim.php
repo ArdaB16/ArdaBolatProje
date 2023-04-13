@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArdaB Proje</title>
     <link rel="stylesheet" type="text/css" href="../cssler/style3.css">
-    <script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
 function gizlifilm() {
   var randomNum = Math.random();
-  if (randomNum < 0.9) {
+  if (randomNum < 0.1) {
     window.location.href = "../anadosyalar/index.php";
   } else {
     window.location.href = "gizlifilm.php";
@@ -18,42 +21,34 @@ function gizlifilm() {
 </script>
 </head>
 <body>
-    <div id="container">
-        <div id="top"> 
-            <div id="sdk">
-            <a href="#" onclick="gizlifilm(); return false;"><img src="../foto/toppng.com-kamera-film-841x720.png" width="12%"></a>
-
-
-            </div> 
-        </div>
-
-
-     <div id="top2"> 
-         <div id="sd">
-               <a href="../anadosyalar/ara.php"><img src="../foto/pngwing.com.png" width="12%"></a>
-         </div> 
-         <div id="menu2">
-              <ul class="menu">
-              <?php
+<div id="container">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <a href="#" class="navbar-brand" onclick="gizlifilm(); return false;">FullHDFilmİzlermisin.com</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+    <?php
                   session_start();
                   if(isset($_SESSION['username'])) {
                   echo "Welcome " . $_SESSION['username'];
                   echo '<br>';
                   echo '<br>';
-                  echo '<li><a href="../anadosyalar/logout.php">Çıkış Yap</a></li>';
-                  echo '<li><a href="../anadosyalar/hesapayarlari.php">Hesap Ayarları</a></li>';
+                  echo '<li><a href="../anadosyalar/logout.php"><span class="glyphicon glyphicon-user"></span>Çıkış Yap</a></li>';
+                  echo '<li><a href="../anadosyalar/hesapayarlari.php"><span class="glyphicon glyphicon-user"></span>Hesap Ayarları</a></li>';
+                  echo '<li><a href="ara.php"><span class="glyphicon glyphicon-search"></span>Ara</a></li>';
+
                   
     }   else {
-        echo '<li><a href="../anadosyalar/kayitol.php">Kayit Ol</a></li>';
-        echo '<li><a href="../anadosyalar/girisyap.php">Giriş Yap</a></li>';
+        echo '<li><a href="../anadosyalar/kayitol.php"><span class="glyphicon glyphicon-log-in"></span>Kayıt Ol</a></li>';
+        echo '<li><a href="../anadosyalar/girisyap.php"><span class="glyphicon glyphicon-log-in"></span>Giriş Yap</a></li>';
+        echo '<li><a href="ara.php"><span class="glyphicon glyphicon-search"></span>Ara</a></li>';
     }
 ?>
                 </ul>
- 
-
-            </div>
-     </div>
-     
+    </ul>
+  </div>
+</nav>    
 <div id="body2">
  <div id="sol"></div>
  <div id="orta" style="text-align: center;">
@@ -75,7 +70,7 @@ function gizlifilm() {
     <input id="sa" type="text" name="yorum" placeholder="Yorum Yazınız">
     <br>
     <br>
-    <input type="submit" value="Yorum Ekle">
+    <input type="submit" class="yazılar" value="Yorum Ekle">
 </form>
 
     <br>

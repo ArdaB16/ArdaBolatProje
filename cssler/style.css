@@ -1,119 +1,114 @@
-.menu
-{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    
-}
-.menu a
-{
-    color: white; 
-    background-color: #997;
-    width: 120px;
-    text-decoration: none;
-    padding: 10px 10px;
-
-}
-.menu a:hover
-{
-    font-weight: bold;
-    color:#960;
-    background-color: #cf3;
-}
-.menu li
-{
-    margin-left: 1%;
-    display: inline;
-}
 #container
 {
     width: 100%;
-    height: 115vh;
+    height: 118vh;
     background-color: rgb(34, 33, 33);
     padding-top: 1%;
     float: left;
     color: white;
 }
-#top
-{
-    width: 48%;
-    height: 13vh;
-    background-color: purple;
-    margin-left: 1%;
-    margin-top: 1%;
-    float: left;
-}
-#sdk
-{
-    float: left;
-    width: 100%;
-    margin-left: 1%;
-}
-#top2
-{
-    width: 50%;
-    height: 13vh;
-    background-color: purple;
-    margin-top: 1%;
-    float: left;
-}
-#sd
-{
-    width: 100%;
-    margin-left: 1%;
-    position: relative;
-    left: 83%;
-}
 #menu2
 {
     position: relative;
     bottom: 55%;
-    left: 60%;
+    left: 48%;
+    width: 40%;
+    float: left ;
+}
+.btn
+{
+    color: white;
+    background-color: rgb(58, 51, 51);
+}
+.yazılar
+{
+    color: black;
+	border-radius: 10px;
 }
 #menu3
 {
     position: relative;
     bottom: 55%;
     left: 60%;
+    float: left;
+}
+.btn:hover
+{
+    color: white;
+}
+.araba
+{
+    width: 11%;
+    height: 20vh;
+    margin-top: 2%;
+    margin-left: 6%;
+    border-radius: 10px;
+    overflow:hidden;
+    position: relative;  
+    cursor: pointer;
+    float: left;
+    box-shadow: 0px 3px 3px 3px #aaa; 
+}
+.araba:not(.araba:first-child)
+{
+    margin-left: 20px;
+}
+.araba img
+{
+    width: 100%;
+    height: 20vh;
+    left: -15;
+    top: -5;
+    filter: grayscale(50%);
+    transition: all 500ms;
+}
+.araba:hover img
+{
+    filter: grayscale(0%);
+    transform: scale(1.2);
+    rotate: -10deg;
+}
+@media screen and(max-width:700px)
+{
+    .container{ width: 700px;} .araba{float: none;}
+    .araba:not(.araba:first-child){ margin: 30px 0px;}
 }
 .resim
 {
-    border: 10px ridge #222121;
-    width: 10%;
+    border: 4px ridge #222121;
+    width: 11%;
     height: 20vh;
     margin: 2.5%;
+    border-radius: 10px;
     float: left;
 }
 #sol
 {
-    background-color: rgb(137, 6, 245);
+    background-color: rgb(68, 66, 70);
     width: 10%;
     height: 82vh;
     float: left;
     margin-left: 1%;
-    margin-top: 1%;
 }
 #orta
 {
-    background-color: rgb(48, 5, 83);
+    background-color: rgb(26, 23, 29);
     width: 76%;
     height: 82vh;
     float: left;
     margin-left: 1%;
-    margin-top: 1%;
 }
 #sag
 {
-    background-color: rgb(126, 9, 223);
+    background-color: rgb(68, 66, 70);
     width: 10%;
     height: 82vh;
     float: left;
     margin-left: 1%;
-    margin-top: 1%;
 }
 #alt
 {
-    background-color: gray;
+    background-color: rgb(65, 65, 65);
     width: 98%;
     height: 13vh;
     float: left;
@@ -125,6 +120,26 @@
 }
 #sakat
 {
-   color: rgb(48, 5, 83);
+   color: rgb(26, 23, 29);
    text-align: center;
+}
+#sa1
+{
+    margin-left: 4%;
+}
+#sa2
+{
+    margin-left: 4%;
+}
+#sa3
+{
+    margin-left: 4%;
+}
+#sa4
+{
+    margin-left: 4%;
+}
+#sa5
+{
+    margin-left: 4%;
 }
